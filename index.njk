@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Available AI models</title>
+  <link rel="stylesheet" href="public/styles.css">
+</head>
+<body class="no_js">
+  <noscript>Javascript needs to be available</noscript>
+  <h1>Available AI Models</h1>
+  <p>Holding text</p>
+  <div class="grid">
+    <div class="grid__col grid__col--one-third">
+      <h2>Settings:</h2>
+      <form>
+        <label for="sort-model-by">Sort by:</label>
+        <select id="sort-model-by">
+          <option value="">Name</option>
+          <option value="">Developer</option>
+          <option value="">Release date</option>
+        </select>
+        <label for="search-model">Search:</label>
+        <input type="text" id="search-model">
+        <input type="submit" value="Search">
+      </form>
+    </div>
+    <div class="grid__col grid__col--two-thirds">
+      <h2>Models</h2>
+      {% if models %}
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Developer</th>
+            <th>Release date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for model in models %}
+          <tr>
+            <td>{{ model.name }}</td>
+            <td>{{ model.developer }}</td>
+            <td>{{ model.release_date }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <h2>There has been an issue loading the data</h2>
+      <p>There is either no data or there was an error is loading this information</p>
+      {% endif %}
+    </div>
+      <script src="public/scripts.js" defer></script>
+
+  </body>
+  </html>

@@ -1,0 +1,16 @@
+{
+  "name": "senior-fe-dev-task-main",
+  "version": "1.0.0",
+  "description": "Dev task",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.3",
+    "webpack": "^5.96.1"
+  }
+}

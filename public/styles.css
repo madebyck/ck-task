@@ -1,0 +1,28 @@
+body {
+  background: linear-gradient(145deg, var(--iai-background-colour-1, #f6ebf1) 0%, var(--iai-background-colour-2, #e6ecf2 100%));
+  font-size: 100%;
+  font-size: 1rem; }
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap; }
+  @media (min-width: 960px) {
+    .grid {
+      flex-wrap: nowrap; } }
+  .grid__col {
+    background-color: #ffffff;
+    padding: 1rem; }
+    .grid__col--one-third {
+      width: 100%; }
+      @media (min-width: 960px) {
+        .grid__col--one-third {
+          width: 33%; } }
+    .grid__col--two-thirds {
+      width: 100%; }
+      @media (min-width: 960px) {
+        .grid__col--two-thirds {
+          width: 66%; } }
+
+/*# sourceMappingURL=styles.css.map */
